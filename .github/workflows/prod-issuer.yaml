@@ -1,7 +1,7 @@
 apiVersion: certmanager.k8s.io/v1alpha1
    kind: Issuer
    metadata:
-     name: ayyaz-letsencrypt-prod-issuer
+     name: wp-letsencrypt-prod-issuer
    spec:
      acme:
        # The ACME server URL
@@ -10,6 +10,6 @@ apiVersion: certmanager.k8s.io/v1alpha1
        email: beto2l@me.com
        # Name of a secret used to store the ACME account private key
        privateKeySecretRef:
-         name: ayyaz-letsencrypt-prod-issuer
+         name: wp-letsencrypt-prod-issuer
        # Enable the HTTP-01 challenge provider
        http01: {}
