@@ -1,28 +1,28 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: wp--ingress
+  name: ayyaz-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/ssl-redirect: "false" 
-    certmanager.k8s.io/issuer: "wp--letsencrypt-staging-issuer"
+    certmanager.k8s.io/issuer: "ayyaz-letsencrypt-staging-issuer"
     certmanager.k8s.io/acme-challenge-type: http01
 spec:
   tls:
   - hosts:
     - recetarioketo.com
-    secretName: wp--letsencrypt-staging-certificate
+    secretName: ayyaz-letsencrypt-staging-certificate
   rules:
   - host: recetarioketo.com
     http:
       paths:
       - path: /
         backend:
-          serviceName: wp-demo-wordpress
+          serviceName: ayyazdemo-wordpress
           servicePort: 80
   - http:
       paths:
       - path: /
         backend:
-          serviceName: wp-demo-wordpress
+          serviceName: ayyazdemo-wordpress
           servicePort: 80
