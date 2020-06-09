@@ -20,9 +20,3 @@ spec:
         backend:
           serviceName: ayyazdemo-wordpress
           servicePort: 80
-  - http:
-      paths:
-      - path: /
-        backend:
-          serviceName: ayyazdemo-wordpress
-          servicePort: 80
