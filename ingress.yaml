@@ -20,3 +20,9 @@ spec:
         backend:
           serviceName: ayyazdemo-wordpress
           servicePort: 80
+  - http: www.recetarioketo.com
+      paths:
+      - path: /
+        backend:
+          serviceName: ayyazdemo-wordpress
+          servicePort: 80
