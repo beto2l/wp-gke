@@ -11,16 +11,11 @@ spec:
   tls:
   - hosts:
     - recetarioketo.com
+    - www.recetarioketo.com
     secretName: ayyaz-letsencrypt-staging-certificate
   rules:
   - host: recetarioketo.com
     http:
-      paths:
-      - path: /
-        backend:
-          serviceName: ayyazdemo-wordpress
-          servicePort: 80
-  - http: www.recetarioketo.com
       paths:
       - path: /
         backend:
